@@ -1,0 +1,168 @@
+/* ======================
+   CBC Landing Page Styles
+   ====================== */
+
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Navigation */
+nav {
+  background: #003399;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Hero Section (EU Flag Style) */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 5rem 1rem;
+  color: white;
+  background: #003399; /* EU Blue */
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* EU Flag Stars */
+.eu-stars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eu-stars .circle {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.eu-stars span {
+  position: absolute;
+  color: #ffd700;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+/* Track Record Section */
+#track-record {
+  padding: 4rem 1rem;
+  background: #f3f4f6;
+  text-align: center;
+}
+
+#track-record h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.track-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.track-card:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+  padding: 3rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+#contact h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #f9fafb;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+footer .certifications {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+footer .certifications img {
+  width: 60px;
+  height: auto;
+  animation: pulse 3s infinite;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden-anim {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.visible {
+  animation: slideUp 1s forwards;
+}
